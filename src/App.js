@@ -49,11 +49,13 @@ const [data,setData] = useState();
           //   {data.main.temp}C  
           // </div>
           <center>
-          <Container md={12} style={{margin:"0px", maxWidth: "25%", maxHeight: "85%", height: "85%"}}>
+          <Container md={12} style={{margin:"0px", maxWidth: "25%", maxHeight: "85%", height: "100%"}}>
 
-              <Card style={{height: "100px",width: "80%" , border: "1px solid", marginTop: "15px", padding: "25px", fontSize: "20px", fontWeight: "Bold"}}>
+              <Card style={{height: "100%",width: "100%" , border: "1px solid", marginTop: "15px", padding: "25px", fontSize: "20px", fontWeight: "Bold"}}>
                 <Card.Text>
-                  {data.main.temp}°C
+                  <p>Temprature: {data.main.temp}°C</p>
+                  <p>Longitude: {data.coord.lon}</p>
+                  <p>Latitude: {data.coord.lat}</p>
                 </Card.Text>
 
               </Card>
